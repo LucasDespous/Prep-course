@@ -2,70 +2,104 @@
 /*5️⃣ EJERCICIO 05 5️⃣*/
 
 function esPositivo(num) {
-   // La función recibe un entero. Devuelve como resultado un string que indica si el número
-   // es positivo o negativo.
-   // Si el número es positivo ---> "Es positivo".
-   // Si el número es negativo ---> "Es negativo".
-   // Si el número es 0, devuelve false.
-   // Tu código:
+  // La función recibe un entero. Devuelve como resultado un string que indica si el número
+  // es positivo o negativo.
+  // Si el número es positivo ---> "Es positivo".
+  // Si el número es negativo ---> "Es negativo".
+  // Si el número es 0, devuelve false.
+  // Tu código:
+  if (num > 0) {
+    return "Es positivo";
+  } else if (num < 0) {
+    return "Es negativo";
+  } else {
+    return false;
+  }
 }
 
 function agregarSimboloExclamacion(str) {
-   // Agrega un símbolo de exclamación al final del string "str" y retórnalo
-   // Ejemplo: "hello world" ---> "hello world!"
-   // Tu código:
+  // Agrega un símbolo de exclamación al final del string "str" y retórnalo
+  // Ejemplo: "hello world" ---> "hello world!"
+  // Tu código:
+  return str + "!";
 }
 
 function combinarNombres(nombre, apellido) {
-   // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
-   // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
-   // Tu código:
+  // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
+  // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
+  // Tu código:
+  return nombre + " " + apellido;
 }
 
 function obtenerSaludo(nombre) {
-   // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
-   // Ejemplo: "Martin" ---> "Hola Martin!"
-   // Tu código:
+  // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
+  // Ejemplo: "Martin" ---> "Hola Martin!"
+  // Tu código:
+  return "Hola" + " " + nombre + "!";
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
-   // Retornar el área de un rectángulo teniendo su altura y ancho.
-   // Tu código:
+  // Retornar el área de un rectángulo teniendo su altura y ancho.
+  // Tu código:
+  var operacion1 = alto * ancho;
+  return operacion1;
 }
+var resultado1 = obtenerAreaRectangulo(3, 5);
+console.log(resultado1);
 
 function retornarPerimetro(lado) {
-   // La función recibe como argumento la medida de un lado de un cuadrado.
-   // Debes retornar su perímetro.
-   // Tu código:
+  // La función recibe como argumento la medida de un lado de un cuadrado.
+  // Debes retornar su perímetro.
+  // Tu código:
+  var perimetro = lado + lado + lado + lado;
+  return perimetro;
 }
+var resultado2 = retornarPerimetro(2);
+console.log(resultado2);
 
 function areaDelTriangulo(base, altura) {
-   // Calcula el área de un triángulo y retorna el resultado.
-   // Tu código:
+  // Calcula el área de un triángulo y retorna el resultado.
+  // Tu código:
+  var operacion3 = (base * altura) / 2;
+  return operacion3;
 }
+var resultado3 = areaDelTriangulo(4, 6);
+console.log(resultado3);
 
 function deEuroAdolar(euro) {
-   // Supongamos que 1 euro equivale a 1.20 dólares.
-   // Debes calcular el valor recibido como argumento pasándolo a dolares.
-   // Tu código:
+  // Supongamos que 1 euro equivale a 1.20 dólares.
+  // Debes calcular el valor recibido como argumento pasándolo a dolares.
+  // Tu código:
+  var operacionDolar = euro * 1.2;
+  return operacionDolar;
 }
 
 function esVocal(letra) {
-   // Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”.
-   // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
-   // Si no es vocal, tambien debe retornar "Dato incorrecto".
-   // Tu código:
-}
+  // Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”.
+  // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
+  // Si no es vocal, tambien debe retornar "Dato incorrecto".
+  // Tu código:
+  if (letra === ("a") || letra === ("e") || letra === ("i") || letra === ("o") || letra === ("u")) {
+    return "Es vocal"
+  } else if ("letra".length > 1) {
+    return "Dato incorrecto";
+  } else {
+    return "Dato incorrecto";
+  }
+} 
+  
+  
+  
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
-   esPositivo,
-   agregarSimboloExclamacion,
-   combinarNombres,
-   obtenerSaludo,
-   obtenerAreaRectangulo,
-   retornarPerimetro,
-   areaDelTriangulo,
-   deEuroAdolar,
-   esVocal,
+  esPositivo,
+  agregarSimboloExclamacion,
+  combinarNombres,
+  obtenerSaludo,
+  obtenerAreaRectangulo,
+  retornarPerimetro,
+  areaDelTriangulo,
+  deEuroAdolar,
+  esVocal,
 };
